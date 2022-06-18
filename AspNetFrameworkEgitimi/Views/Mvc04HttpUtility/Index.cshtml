@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewBag.Title = "Http Utility";
+}
+
+<h2>Mvc04 Http Utility</h2>
+
+<p>HttpUtility ile içerikleri web için kaydedebilir ve kodlama içeriği çözebiliiriz</p>
+
+@{ 
+    string baslik = "<h1>HttpUtility HtmlEncode, HtmlDecode</h1>";
+    string baslikHtmlEncode = HttpUtility.HtmlEncode(baslik);
+    string baslikHtmlDecode = HttpUtility.HtmlDecode(baslikHtmlEncode);
+}
+
+<h3>Başlık : @baslik</h3>
+
+<h3>Başlık HtmlEncode Hali : @baslikHtmlEncode </h3>
+
+<h3>Başlık HtmlDecode Hali : @baslikHtmlDecode </h3>
+
+<hr/>
+
+@Html.Raw(baslik)
